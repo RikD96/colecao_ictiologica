@@ -70,3 +70,19 @@ CREATE TABLE imagens (
     url_imagem TEXT NOT NULL,
     data_upload DATE DEFAULT CURRENT_DATE
 );
+
+--################################################################################################--
+--################################################################################################--
+--##### Adicionando informações na tabela taxonomia usando o comando INSERT INTO no PostgreSQL: ##--
+--################################################################################################--
+--################################################################################################--
+
+INSERT INTO taxonomia (
+    reino, filo, classe, ordem, familia, genero, especie, nome_autor, ano_descricao
+) VALUES
+    ('Animalia', 'Chordata', 'Actinopterygii', 'Characiformes', 'Characidae', 'Astyanax', 'Astyanax bimaculatus', 'Linnaeus', 1758),
+    ('Animalia', 'Chordata', 'Actinopterygii', 'Siluriformes', 'Pimelodidae', 'Pseudoplatystoma', 'Pseudoplatystoma corruscans', 'Spix & Agassiz', 1829),
+    ('Animalia', 'Chordata', 'Actinopterygii', 'Perciformes', 'Cichlidae', 'Cichla', 'Cichla temensis', 'Humboldt', 1821);
+
+SELECT * FROM taxonomia
+
